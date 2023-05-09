@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card } from "../Card/Card";
 import { getUsers } from "../../services/api";
+import { List, LoadMore } from "./CardList.styled";
 
 export const CardsList = ({ selectedOption }) => {
   const [users, setUsers] = useState([]);
@@ -17,17 +18,17 @@ export const CardsList = ({ selectedOption }) => {
   };
   return (
     <>
-      <ul>
+      <List>
         {users.map((user) => {
           if (cardsAmount >= user.id) {
             return <Card key={user.id} user={user} />;
           }
         })}
-      </ul>
-      {cardsAmount <= 12 && (
-        <button type="button" onClick={onClick}>
+      </List>
+      {cardsAmount < 12 && (
+        <LoadMore type="button" onClick={onClick}>
           Load more
-        </button>
+        </LoadMore>
       )}
     </>
   );
