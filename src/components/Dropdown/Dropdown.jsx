@@ -1,8 +1,4 @@
-export const Dropdown = ({ setSelectedOption, selectedOption }) => {
-  const handleOptionChange = (event) => {
-    setSelectedOption(event.target.value);
-  };
-
+export const Dropdown = ({ handleOptionChange, selectedOption }) => {
   return (
     <div>
       <select value={selectedOption} onChange={handleOptionChange}>
