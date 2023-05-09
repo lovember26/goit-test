@@ -9,14 +9,16 @@ export const Tweets = () => {
   const [users, setUsers] = useState([]);
   const [selectedOption, setSelectedOption] = useState("all");
   const [filteredUsers, setFilteredUsers] = useState([]);
-
+  const [page, setPage] = useState(1);
   useEffect(() => {
-    getUsers()
+    getUsers(page)
       .then((data) => {
-        setUsers(data);
+        setUsers((prevState) => {
+          return page === 1 ? data : [...prevState, ...data];
+        });
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [page]);
 
   useEffect(() => {
     setFilteredUsers(selection(selectedOption, users));
@@ -24,6 +26,9 @@ export const Tweets = () => {
 
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
+  };
+  const pageUpdate = () => {
+    setPage(page + 1);
   };
 
   return (
@@ -34,7 +39,7 @@ export const Tweets = () => {
         handleOptionChange={handleOptionChange}
         selectedOption={selectedOption}
       />
-      <CardsList filteredUsers={filteredUsers} />
+      <CardsList filteredUsers={filteredUsers} pageUpdate={pageUpdate} />
     </>
   );
 };
