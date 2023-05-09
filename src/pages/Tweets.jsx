@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { CardsList } from "../components/CardsList/CardsList";
 import { Dropdown } from "../components/Dropdown/Dropdown";
 import { useEffect, useState } from "react";

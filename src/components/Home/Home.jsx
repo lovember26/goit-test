@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Header, StyledLink, Title } from "./Home.styled";
 
 export const Home = () => {
