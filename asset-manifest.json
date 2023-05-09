@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/goit-test/static/css/main.073c9b0a.css",
-    "main.js": "/goit-test/static/js/main.51fa109e.js",
+    "main.js": "/goit-test/static/js/main.08d30b0a.js",
     "static/js/787.0b4c2dfb.chunk.js": "/goit-test/static/js/787.0b4c2dfb.chunk.js",
     "static/media/QuestionMark.svg": "/goit-test/static/media/QuestionMark.404ae19cf117aadfeaf89f819fe0b49b.svg",
     "static/media/Logo.svg": "/goit-test/static/media/Logo.e917114d7945c04c85a8946a331d28b6.svg",
@@ -9,11 +9,11 @@
     "static/media/Rectangle.svg": "/goit-test/static/media/Rectangle.90e23cf44c8259d5b2f74d75abbbd5cd.svg",
     "index.html": "/goit-test/index.html",
     "main.073c9b0a.css.map": "/goit-test/static/css/main.073c9b0a.css.map",
-    "main.51fa109e.js.map": "/goit-test/static/js/main.51fa109e.js.map",
+    "main.08d30b0a.js.map": "/goit-test/static/js/main.08d30b0a.js.map",
     "787.0b4c2dfb.chunk.js.map": "/goit-test/static/js/787.0b4c2dfb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.51fa109e.js"
+    "static/js/main.08d30b0a.js"
   ]
 }
