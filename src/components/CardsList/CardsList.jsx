@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Card } from "../Card/Card";
 
-import { List, LoadMore } from "./CardList.styled";
+import { Container, List, LoadMore } from "./CardList.styled";
 
 export const CardsList = ({ filteredUsers }) => {
   const [cardsAmount, setCardsAmount] = useState(3);
@@ -10,7 +10,7 @@ export const CardsList = ({ filteredUsers }) => {
     setCardsAmount(cardsAmount + 3);
   };
   return (
-    <>
+    <Container>
       <List>
         {filteredUsers.map((user) => {
           if (cardsAmount >= user.id) {
@@ -18,11 +18,11 @@ export const CardsList = ({ filteredUsers }) => {
           }
         })}
       </List>
-      {cardsAmount < 12 && (
+      {cardsAmount < filteredUsers.length && (
         <LoadMore type="button" onClick={onClick}>
           Load more
         </LoadMore>
       )}
-    </>
+    </Container>
   );
 };

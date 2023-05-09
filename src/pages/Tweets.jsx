@@ -4,6 +4,7 @@ import { Dropdown } from "../components/Dropdown/Dropdown";
 import { useEffect, useState } from "react";
 import { selection } from "../services/dropdown";
 import { getUsers } from "../services/api";
+import { Header, StyledLink } from "../components/Home/Home.styled";
 
 export const Tweets = () => {
   const [users, setUsers] = useState([]);
@@ -28,8 +29,8 @@ export const Tweets = () => {
 
   return (
     <>
-      <div>Tweets</div>
-      <Link to="/">Back</Link>
+      <Header>Tweets</Header>
+      <StyledLink to="/">&larr;back</StyledLink>
       <Dropdown
         handleOptionChange={handleOptionChange}
         selectedOption={selectedOption}

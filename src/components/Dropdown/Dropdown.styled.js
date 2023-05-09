@@ -1,16 +1,9 @@
 import styled from "styled-components";
 
-export const List = styled.ul`
-  list-style: none;
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-`;
-
-export const LoadMore = styled.button`
+export const Select = styled.select`
   width: 196px;
   height: 50px;
-  background: #471ca9;
+  background: #dde0fd;
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
   padding: 14px 28px;
@@ -22,11 +15,5 @@ export const LoadMore = styled.button`
   margin-top: 10px;
   text-transform: uppercase;
 
-  color: #ebd8ff;
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  color: #471ca9;
 `;
