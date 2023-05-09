@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Card } from "../Card/Card";
 
 import { Container, List, LoadMore } from "./CardList.styled";
