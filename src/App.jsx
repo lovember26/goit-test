@@ -9,7 +9,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="tweets" element={<Tweets />} />
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<HomePage />} />
     </Routes>
   );
 }
